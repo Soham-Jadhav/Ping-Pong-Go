@@ -3,7 +3,7 @@ Engage in lively 2-player ping pong duels. <br>Enjoy simple controls, responsive
 
 Whoever wins three games first wins.
 
-You can play the game here: \<to be uploaded...\>
+You can play the game here: https://sj21031-ping-pong-go.netlify.app/ 
 
 ![image](https://github.com/Soham-Jadhav/Ping-Pong-Go/assets/98579549/a9a6d36e-7150-4957-aec4-3098e6109290)
 

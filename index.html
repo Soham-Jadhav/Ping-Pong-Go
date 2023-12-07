@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Go</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: wheat;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: table;">
+        <!-- Header -->
+        <div style="
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+">
+            <h1 style="
+        color: red;
+        font: bold;
+        display: table-header-group;
+    ">
+                !!! Ping Pong Go !!!
+            </h1>
+        </div>
+
+        <div style="
+            max-width: 100%; 
+            width: 1350px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            height: 576px; 
+            position: fixed; 
+            margin-top: 2px;
+            ">
+            <div id="playerScores" style="
+                position: fixed; 
+                display: none; 
+                color: #F97316; 
+                width: 100%; 
+                font-size: 0.875rem; 
+                line-height: 1.25rem; 
+                margin-left: 2px; 
+                margin-top: 1px; 
+                user-select: none; 
+                max-width: 1024px; 
+                max-height: 576px; 
+                text-align: start; 
+                height: 100%;
+                ">
+                <span style="
+                padding-right: 1px; 
+                padding-left: 2px;
+                ">
+                    Player1:
+                </span>
+                <span id="player1Score">0</span>
+                <div class="pr-5" style="
+                text-align: end; 
+                width: 100%; 
+                max-width: 100%; 
+                padding-right: 5px;
+                ">
+                    <span>
+                        Player2:
+                    </span>
+                    <span id="player2Score">
+                        0
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Display Winner -->
+        <div id="displayText" style="
+    position: absolute; 
+    color: white; 
+    justify-content: center; 
+    align-items: center; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    top: 0;
+    color: black;
+">
+            <!-- Modal  -->
+            <div id="modal" style="
+        display: flex; 
+        position: absolute; 
+        justify-content: center; 
+        align-items: center; 
+        inset: 0;
+    ">
+                <div style="
+            text-align: center; 
+            max-width: 28rem; 
+            background-color: #FDBA74; 
+            width: 100%; 
+            padding: 6px; 
+            border: 3px solid black;
+            border-radius: 10px;
+        ">
+                    <h1 id="finalWinner" style="
+                color: #4F46E5; 
+                font: bold; 
+                line-height: 1; 
+                font-size: 2.25rem; 
+                line-height: 2.5rem;
+            ">
+                        Ping Pong Go
+                    </h1>
+                    <div>
+                        <button id="startGameButton" style="
+                    background-color: #4F46E5; 
+                    color: black; 
+                    width: 100%; 
+                    padding-top: 3px; 
+                    padding-bottom: 3px; 
+                    font-size: 0.875rem; 
+                    line-height: 1.25rem; 
+                    border-radius: 9999px;
+                ">
+                            Start
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <canvas style="border: 5px solid white;">
+            Your browser does not support the HTML5 canvas tag. Please upgrade your browser to a more modern one.
+        </canvas>
+
+        <!-- Game Rules & Description -->
+        <div style="
+    display: table-footer-group; 
+    width: 60%;
+">
+            <br>
+            <p style="
+        font-size: x-small;
+    ">
+                Engage in lively 2-player ping pong duels. Whoever completes 3 points first wins<br>
+                Enjoy simple controls, responsive gameplay, and friendly competition as you challenge a friend in this
+                classic table tennis experience.
+            </p>
+            <p style="
+        font-size: xx-small;
+    ">
+                For player 1 (red): W to move up, S to move down
+            </p>
+            <p style="
+        font-size: xx-small;
+    ">
+                For player 2 (blue): Up arrow to move up, Down arrow to move down
+            </p>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

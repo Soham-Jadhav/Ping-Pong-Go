@@ -143,13 +143,6 @@ class Ball {
 context.fillStyle = 'black';
 context.fillRect(0, 0, canvas.width, canvas.height);
 
-// context.fillStyle = '#262626';
-// context.fillRect(0, 0, canvas.width, canvas.height);
-
-// context.fillStyle = 'white';
-// context.fillRect(0, canvas.height / 2 - 0.5, canvas.width, 1);
-// context.fillRect(canvas.width / 2 - 2.5, 0, 5, canvas.height);
-
 let paddle1 = new Paddle({
     position: {
         x: 50,
@@ -256,34 +249,28 @@ function animate() {
     ball.update();
 }
 
-// animate();
-
 addEventListener('keydown', ({ key }) => {
     switch (key) {
         // Player 1 down
         case 's':
-            console.log('down 1');
             paddle1.velocity.y = paddleVelocity;
 
             break;
 
         // Player 1 up
         case 'w':
-            console.log('up 1');
             paddle1.velocity.y = -paddleVelocity;
 
             break;
 
         // Player 2 down
         case 'ArrowDown':
-            console.log('down 2');
             paddle2.velocity.y = paddleVelocity;
 
             break;
 
         // Player 2 up
         case 'ArrowUp':
-            console.log('up 2');
             paddle2.velocity.y = -paddleVelocity;
 
             break;
